@@ -1,0 +1,7 @@
+# Carpeta de soluciones docentes. No subir si el repositorio será visible para estudiantes.
+solucion_docente/
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
+.vscode/

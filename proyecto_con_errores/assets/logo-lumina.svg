@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6c76b"/><stop offset="1" stop-color="#f06d5f"/></linearGradient></defs>
+  <rect width="220" height="220" rx="50" fill="#12101b"/>
+  <circle cx="110" cy="110" r="68" fill="none" stroke="url(#g)" stroke-width="12"/>
+  <path d="M73 127c28 24 55 24 82 0" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+  <path d="M84 70h52l-12 36H96z" fill="url(#g)"/>
+  <path d="M110 106v36M91 142h38" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <text x="110" y="190" text-anchor="middle" font-family="Arial" font-size="22" fill="#fff" font-weight="700">LUMINA</text>
+</svg>
