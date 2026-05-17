@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lúmina Rooftop Bar | Proyecto con errores</title>
+  <title>Lúmina Rooftop Bar | Proyecto corregido</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -16,19 +16,19 @@
       <span>Lúmina <strong>Rooftop Bar</strong></span>
     </a>
 
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false">☰</button>
 
-    <nav class="main-nav" id="main-nav">
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
       <a href="#inicio">Inicio</a>
       <a href="#menu">Carta</a>
       <a href="#experiencia">Experiencia</a>
-      <a href="#reservass">Reservas</a>
+      <a href="#reservas">Reservas</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="hero__contnet">
+      <div class="hero__content">
         <p class="eyebrow">Coctelería de autor · Medellín</p>
         <h1>Un bar de altura para noches memorables.</h1>
         <p>Lúmina combina cocteles artesanales, música selecta y una terraza urbana con vista a la ciudad.</p>
@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="hero__media">
-        <img src="assets/hero-image.jpeg" alt="Foto de bar nocturno con coctel principal">
+        <img src="assets/hero-image.jpeg" alt="Bar nocturno con coctel principal">
       </div>
     </section>
 
@@ -48,7 +48,7 @@
       <article><strong>360°</strong><span>vista urbana</span></article>
     </section>
 
-    <section class="section" id="menú">
+    <section class="section" id="menu">
       <div class="section-heading">
         <p class="eyebrow">Carta recomendada</p>
         <h2>Sabores diseñados para sorprender</h2>
@@ -56,10 +56,10 @@
       </div>
 
       <div class="filters" aria-label="Filtros de carta">
-        <button class="filtro-chip is-active" data-filter="todos">Todos</button>
-        <button class="filtro-chip" data-filter="cocteles">Cocteles</button>
-        <button class="filtro-chip" data-filter="sin-alcohol">Sin alcohol</button>
-        <button class="filtro-chip" data-filter="tapas">Tapas</button>
+        <button class="filtro-chip is-active" type="button" data-filter="todos">Todos</button>
+        <button class="filtro-chip" type="button" data-filter="cocteles">Cocteles</button>
+        <button class="filtro-chip" type="button" data-filter="sin-alcohol">Sin alcohol</button>
+        <button class="filtro-chip" type="button" data-filter="tapas">Tapas</button>
       </div>
 
       <div class="menu-grid">
@@ -91,7 +91,7 @@
     </section>
 
     <section class="experience" id="experiencia">
-      <img src="assets/gallery-image.jpeg" alt="Foto de terraza nocturna con luces y cocteles">
+      <img src="assets/gallery-image.jpeg" alt="Terraza nocturna con luces y cocteles">
       <div>
         <p class="eyebrow">La experiencia</p>
         <h2>Música, terraza y atención premium.</h2>
@@ -108,30 +108,38 @@
       <div class="section-heading">
         <p class="eyebrow">Reservas</p>
         <h2>Agenda tu mesa</h2>
-        <p>Completa el formulario. El sistema debe validar los datos y mostrar una confirmación.</p>
+        <p>Completa el formulario. El sistema valida los datos y muestra una confirmación.</p>
       </div>
 
-      <form class="booking-form" id="reserva-form">
-        <label>Nombre completo
-          <input type="text" id="nombre" placeholder="Ej. Ana Pérez">
-        </label>
-        <label>Correo electrónico
-          <input type="email" id="correo" placeholder="ana@email.com">
-        </label>
-        <label>Número de personas
-          <input type="number" id="personas" min="1" max="10" placeholder="2">
-        </label>
-        <label>Fecha de reserva
-          <input type="date" id="fecha">
-        </label>
+      <form class="booking-form" id="reserva-form" novalidate>
+        <div class="form-field">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" autocomplete="name" required>
+        </div>
+
+        <div class="form-field">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ana@email.com" autocomplete="email" required>
+        </div>
+
+        <div class="form-field">
+          <label for="personas">Número de personas</label>
+          <input type="number" id="personas" name="personas" min="1" max="10" placeholder="2" required>
+        </div>
+
+        <div class="form-field">
+          <label for="fecha">Fecha de reserva</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+
         <button class="btn btn-primary" type="submit">Confirmar reserva</button>
-        <p class="form-message" id="mensaje-formulario"></p>
+        <p class="form-message" id="mensaje-formulario" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 Lúmina Rooftop Bar · Proyecto académico con errores intencionales.</p>
+    <p>© 2026 Lúmina Rooftop Bar · Proyecto académico corregido.</p>
     <p>Cra. 45 #10-80, Medellín · contacto@luminarooftop.test</p>
   </footer>
 
